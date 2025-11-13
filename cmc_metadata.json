@@ -1,0 +1,16 @@
+
+{
+  "name": "Kosovo Coin",
+  "symbol": "KSC",
+  "network": "BNB Smart Chain",
+  "type": "BEP-20",
+  "contract_address": "0x094A23c55062DCe69d6EfbA1Ab9dA271B9e5C9F3",
+  "decimals": 18,
+  "total_supply": "7000000000",
+  "official_links": {
+    "website": "",
+    "github": "",
+    "telegram": "",
+    "instagram": ""
+  }
+}
