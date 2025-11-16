@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kosovo Coin (KSC)</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #05060b;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #f0d871;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #f0d871;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px 20px;
+    }
+
+    .hero-coin {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(240, 216, 113, 0.6);
+    }
+
+    .buy-button {
+      margin-top: 15px;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      background: #f0d871;
+      color: #222;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buy-button:hover {
+      background: #f7e693;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .section p {
+      margin: 6px 0;
+    }
+
+    .coins-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .coin-box {
+      width: 220px;
+      text-align: center;
+    }
+
+    .coin-box img {
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 0 18px rgba(240, 216, 113, 0.4);
+    }
+
+    .coin-label {
+      margin-top: 8px;
+      color: #f0d871;
+      font-size: 15px;
+    }
+
+    .buy-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .qr-img {
+      width: 220px;
+      height: 220px;
+      padding: 12px;
+      background: radial-gradient(circle at center, #f7e28a, #c69b2a);
+      border-radius: 24px;
+      box-shadow: 0 0 25px rgba(247, 226, 138, 0.7);
+    }
+
+    .buy-text {
+      max-width: 420px;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 10px;
+      font-size: 13px;
+      background: #06060a;
+      color: #bdbdbd;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding-bottom: 10px;
+      }
+      .section {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kosovo Coin (KSC)</h1>
+  <p>The digital symbol of tradition, identity, and technological progress.</p>
+</header>
+
+<section class="hero">
+  <img src="assets/kosovo1.png" alt="Kosovo Coin" class="hero-coin" />
+  <button class="buy-button"
+          onclick="document.getElementById('buy-section').scrollIntoView({behavior:'smooth'});">
+    Buy Kosovo Coin (KSC)
+  </button>
+</section>
+
+<section class="section">
+  <h2>Official Designs (For Holders)</h2>
+  <p>These three designs are used for Kosovo Coin vouchers, marketing, and presentation.</p>
+
+  <div class="coins-grid">
+    <div class="coin-box">
+      <img src="assets/kosovo1.png" alt="Kosovo Coin Design 1" />
+      <div class="coin-label">Kosovo Coin – Design 1</div>
+    </div>
+
+    <div class="coin-box">
+      <img src="assets/kosovo2.png" alt="Kosovo Coin Design 2" />
+      <div class="coin-label">Kosovo Coin – Design 2</div>
+    </div>
+
+    <div class="coin-box">
+      <img src="assets/kosovo3.png" alt="Kosovo Coin Design 3" />
+      <div class="coin-label">Kosovo Coin – Design 3</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="buy-section">
+  <h2>How to Buy Kosovo Coin (Peer-to-Peer)</h2>
+
+  <div class="buy-wrapper">
+    <img src="assets/kosovo_qr_metamask.png" alt="Kosovo Coin QR" class="qr-img" />
+
+    <div class="buy-text">
+      <p><b>1.</b> Use a Web3 wallet (MetaMask, TrustWallet, Binance Wallet…)</p>
+      <p><b>2.</b> Make sure you are on <b>BNB Smart Chain (BEP-20)</b>.</p>
+      <p><b>3.</b> Send <b>BNB</b> or <b>USDC (BEP-20)</b> to the official wallet:</p>
+      <p><b>Wallet:</b> 0xaae931b63be266d44e0be5d66fede0c1c3b53379</p>
+      <p><b>4.</b> After sending, provide your BEP-20 wallet address and the TX hash.</p>
+      <p><b>5.</b> Once confirmed, Kosovo Coin (KSC) will be sent to you.</p>
+      <p><b>Token Contract:</b> 0x094A23c55062DCe69d6EfbA1Ab9dA271B9e5C9F3</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Token Information</h2>
+  <p><b>Network:</b> BNB Smart Chain (BEP-20)</p>
+  <p><b>Symbol:</b> KSC</p>
+  <p><b>Total Supply:</b> 7,000,000,000 KSC</p>
+  <p><b>Decimals:</b> 18</p>
+</section>
+
+<footer>
+  © 2025 Kosovo Coin — A project of peace, identity, and technological growth.
+</footer>
+
+</body>
+</html>
