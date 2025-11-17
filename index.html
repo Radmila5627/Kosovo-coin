@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kovanica Kosova (KSC)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Kovanica Kosova (KSC) – digitalni simbol tradicije, identiteta i tehnološkog napretka na BNB Smart Chain mreži."
+  />
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0f172a;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --gold: #facc15;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 24px rgba(34, 197, 94, 0.5);
+      object-fit: cover;
+      background: #020617;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 20px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .hero-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #4ade80);
+      color: #020617;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.5);
+      text-decoration: none;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(34, 197, 94, 0.7);
+    }
+
+    .section {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 20px;
+      padding: 18px 16px;
+      border: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .coin-card {
+      background: radial-gradient(circle at top, #1f2937 0, #020617 80%);
+      border-radius: 16px;
+      padding: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      text-align: center;
+    }
+
+    .coin-card img {
+      max-width: 100%;
+      border-radius: 999px;
+      display: block;
+      margin: 0 auto 6px;
+    }
+
+    .coin-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .coin-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    ol {
+      margin-left: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ol li + li {
+      margin-top: 4px;
+    }
+
+    .qr-box {
+      margin: 8px 0 10px;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px dashed var(--border);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 0.85rem;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid #111827;
+      color: #e5e7eb;
+      word-break: break-all;
+    }
+
+    .token-info ul {
+      margin-left: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .token-info li + li {
+      margin-top: 4px;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-wrap">
+        <!-- Logo: može biti lokalni logo.png, a ako ga nema učitat će IPFS sliku -->
+        <img
+          src="logo.png"
+          alt="Kosovo Coin Logo"
+          onerror="this.src='https://ipfs.io/ipfs/bafybeih3pvpqgwruaeg72hicfo3oqqqiwtupuxy6sraao7ssacna4xudfi';"
+        />
+        <div>
+          <h1>Kovanica Kosova (KSC)</h1>
+          <p class="subtitle">
+            Digitalni simbol tradicije, identiteta i tehnološkog napretka.
+          </p>
+        </div>
+      </div>
+      <div class="tag">BNB Smart Chain · BEP-20</div>
+    </header>
+
+    <div class="hero">
+      <div class="hero-title">Kovanica Kosova (KSC)</div>
+      <p class="hero-text">
+        Kovanica Kosova (KSC) je simbolički digitalni token stvoren kao most
+        između sjećanja, identiteta i novog tehnološkog doba. Projekt mira,
+        dostojanstva i edukacije o blockchain tehnologiji.
+      </p>
+      <a href="#kupi" class="hero-button">
+        🪙 Kupite kosovski novčić (KSC)
+      </a>
+    </div>
+
+    <div class="section">
+      <h2>Službeni dizajni (za vlasnike)</h2>
+      <p>
+        Ova tri dizajna koriste se za vaučere za kovanice Kosova, marketing
+        i prezentaciju.
+      </p>
+      <div class="gallery">
+        <div class="coin-card">
+          <img
+            src="https://ipfs.io/ipfs/bafybeibkltke3yenf7rpg5yieybr5aqsz3orgqtgahxmhky4cdam2kpgva"
+            alt="Dizajn kovanice Kosova 1"
+          />
+          <div class="coin-title">Dizajn kovanice Kosova 1</div>
+          <div class="coin-sub">Kovanica Kosova – Dizajn 1 (Gold)</div>
+        </div>
+        <div class="coin-card">
+          <img
+            src="https://ipfs.io/ipfs/bafybeiankc2u2dfng6mhrrb7ucs3bxyw2tlmqfmljucaxikjx5sqfrl2ny"
+            alt="Dizajn kovanice Kosova 2"
+          />
+          <div class="coin-title">Dizajn kovanice Kosova 2</div>
+          <div class="coin-sub">Kovanica Kosova – Dizajn 2 (Numerology 11 → 2)</div>
+        </div>
+        <div class="coin-card">
+          <img
+            src="https://ipfs.io/ipfs/bafybeigk7ewwrjtq7sxzge7h3jfe7xsroiayn66z64jzk3j3aub6d5liey"
+            alt="Dizajn kovanice Kosova 3"
+          />
+          <div class="coin-title">Dizajn kovanice Kosova 3</div>
+          <div class="coin-sub">Kovanica Kosova – Dizajn 3 (Future)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="kupi">
+      <h2>Kako kupiti kosovski novčić (Peer-to-Peer)</h2>
+
+      <div class="qr-box">
+        <strong>QR kod za kovanice Kosova</strong><br />
+        Trenutno se uplate i slanje adrese rade ručno. QR kod i dodatne
+        vizualne upute bit će dodane u sljedećoj fazi (vaučeri i poklon-kartice).
+      </div>
+
+      <ol>
+        <li>
+          Koristite Web3 novčanik (MetaMask, TrustWallet, Binance Wallet…).
+        </li>
+        <li>
+          Provjerite jeste li na <strong>BNB Smart Chain-u (BEP-20)</strong>.
+        </li>
+        <li>
+          Pošaljite <strong>BNB ili USDC (BEP-20)</strong> u službeni novčanik:<br />
+          <code>0xaae931b63be266d44e0be5d66fede0c1c3b53379</code>
+        </li>
+        <li>
+          Nakon slanja, pošaljite adresu svog BEP-20 novčanika i TX hash
+          vlasnici projekta (npr. putem e-maila ili poruke).
+        </li>
+        <li>
+          Nakon potvrde, bit će vam poslan Kosovo Coin (KSC) na vašu BEP-20
+          adresu.
+        </li>
+      </ol>
+
+      <p style="margin-top: 8px;">
+        Ugovor o tokenu:<br />
+        <code>0x094A23c55062DCe69d6EfbA1Ab9dA271B9e5C9F3</code>
+      </p>
+    </div>
+
+    <div class="section token-info">
+      <h2>Informacije o tokenu</h2>
+      <ul>
+        <li>Mreža: BNB Pametni lanac (BEP-20)</li>
+        <li>Simbol: KSC</li>
+        <li>Ukupna ponuda: 7.000.000.000 KSC</li>
+        <li>Decimale: 18</li>
+      </ul>
+    </div>
+
+    <footer>
+      © 2025 <span>Kosovo Coin</span> — Projekt mira, identiteta i tehnološkog rasta.
+    </footer>
+  </div>
+</body>
+</html>
